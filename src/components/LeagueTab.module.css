@@ -1,0 +1,13 @@
+.leaguetab{
+  
+}
+.leaguetab .league{
+  background-color: white;
+  display: inline-block;
+  margin: 1rem;
+  padding: .5rem;
+  border-radius: 10px;
+}
+.leaguetab .league h2{
+  margin: 0;
+}
