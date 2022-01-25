@@ -1,0 +1,27 @@
+.card{
+  background-color: white;
+  border-radius: 10px;
+  margin: 1rem;
+}
+.card p{
+  display: inline-block;
+}
+
+.card .rankname{
+  display: inline-block;
+  width: 30vw;
+  padding-left: 1rem;
+}
+
+.card .rankname p{
+  padding-left: 1rem;
+}
+
+.card .wrapper{
+  display: inline-block;
+}
+
+.card .wrapper p{
+  width: 2rem;
+  text-align: center;
+}
