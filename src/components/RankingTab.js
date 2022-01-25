@@ -38,6 +38,8 @@ const RankingTab = (props) => {
             against={stand.all.goals.against}
             gd={stand.all.goals.for-stand.all.goals.against}
             points={stand.points}
+            form={stand.form}
+            logo={stand.team.logo}
             />
           );
         })}

@@ -9,12 +9,25 @@
 
 .card .rankname{
   display: inline-block;
+  position: relative;
   width: 30vw;
   padding-left: 1rem;
 }
 
+.card .rankname img{
+  position: absolute;
+  top: 50%;
+  margin-left: .4rem;
+  transform: translateY(-50%);  
+  width: 2rem;
+}
+
 .card .rankname p{
   padding-left: 1rem;
+}
+
+.card .rankname .teamname{
+  padding-left: 2.7rem;
 }
 
 .card .wrapper{
@@ -24,4 +37,9 @@
 .card .wrapper p{
   width: 2rem;
   text-align: center;
+}
+
+.card .wrapper .form{
+  display: inline-block;
+  margin-left: 2rem;
 }
