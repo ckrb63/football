@@ -1,0 +1,19 @@
+.wrapper div{
+  margin-left: .1rem;
+  width: 1.3rem;
+  text-align: center;
+  border-radius: .5rem;
+  font-weight: bold;
+}
+.W{
+  display: inline-block;
+  background-color: greenyellow;
+}
+.D{
+  display: inline-block;
+  background-color: grey;
+}
+.L{
+  display: inline-block;
+  background-color: palevioletred;
+}

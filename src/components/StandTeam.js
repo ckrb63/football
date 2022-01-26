@@ -1,4 +1,5 @@
 import style from "./StandTeam.module.css";
+import RecentForm from "./RecentForm";
 const StandTeam = (props) => {
   return (
     <div className={style.card}>
@@ -17,7 +18,7 @@ const StandTeam = (props) => {
         <p>{props.gd}</p>
         <p>{props.points}</p>
         <div className={style.form}>
-          {props.form}
+          <RecentForm form={props.form}/>
         </div>
       </div>
     </div>
