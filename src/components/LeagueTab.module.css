@@ -8,6 +8,19 @@
   padding: .5rem;
   border-radius: 10px;
 }
-.leaguetab .league h2{
-  margin: 0;
+.leaguetab .league{
+  width: 13rem;
+  text-align: center;
+}
+
+.leaguetab .league.league1{
+  background-color: #091C3D;
+}
+
+.leaguetab .league.laliga{
+  background-color: black;
+}
+
+.leaguetab .league img{
+  height: 5rem;
 }
