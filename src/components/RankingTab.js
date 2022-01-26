@@ -3,6 +3,7 @@ import StandTeam from "./StandTeam";
 import APIKEY from "../secret/key";
 import style from './RankingTab.module.css';
 import Spinner from "../UI/Spinner";
+import ColumnName from "./ColumnName";
 const RankingTab = (props) => {
   const [standings, setStandings] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -48,6 +49,7 @@ const RankingTab = (props) => {
 
   return (
     <div className={style.table}>
+      <ColumnName/>
       <ol className={style.list}>
         {context}
       </ol>
