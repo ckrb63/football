@@ -16,7 +16,7 @@ england : 39
 
 const Table = () => {
   const [selectedYear, setSelectedYear] = useState('2021');
-  const [attackPoint, setAttackPoint] = useState('Goal');
+  const [attackPoint, setAttackPoint] = useState('scorers');
   const [selectedTab, setSelectedTab] = useState('TEAM');
   const [selectedLeague, setSelectedLeague] = useState(39);
   const getLeagueName = (selected) => {
@@ -50,7 +50,7 @@ const Table = () => {
   return <react.Fragment>
     <LeagueTab selected={getLeagueName}/>
     <div>
-      <Switch setTab={setSelectedTab}/>
+      <Switch setTab={setSelectedTab} tab={selectedTab}/>
       {selectedTab==='PLAYER' && attackPointTab}
       <YearSelectBox year={selectedYear} onChange={setSelectedYear}/>
     </div>

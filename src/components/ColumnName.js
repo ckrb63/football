@@ -1,6 +1,18 @@
+import { useEffect, useState } from 'react';
 import style from './ColumnName.module.css';
 const ColumnName = () => {
-  return <div className={style.column}>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const scrollHandler = () => {
+    if(window.pageYOffset>299){
+      setIsScrolled(true);
+    }else{
+      setIsScrolled(false);
+    }
+  }
+  useEffect(()=>{
+    window.addEventListener("scroll", scrollHandler)
+  },[]);
+  return <div className={isScrolled ? `${style.column} ${style.scrolled}` : style['column']}>
     <p className={style.team}>Team</p>
     <p>경기</p>
     <p>승</p>

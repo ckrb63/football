@@ -21,7 +21,8 @@
 }
 
 .leaguetab .league{
-  width: 13rem;
+  /* width: 13rem; */
+  width: 15vw;
   text-align: center;
   transition: .2s;
   animation: moveUp 1s ease-out;
@@ -50,7 +51,7 @@
 }
 
 .leaguetab .league img{
-  height: 5rem;
+  height: 4.5rem;
 }
 
 .active{

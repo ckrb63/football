@@ -1,6 +1,26 @@
 .column{
+  top: 0;
+  width: 90.5%;
   margin-left: 1rem;
+  background-color: white;
+  z-index: 5;
 }
+
+@keyframes moveDown{
+  0%{
+    transform: translateY(-2rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.scrolled{
+  position: fixed;
+  border-bottom: #777 solid;
+  animation: moveDown .3s ease-out;
+}
+
 .column p{
   display: inline-block;
   font-size: .8rem;
