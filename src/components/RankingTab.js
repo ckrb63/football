@@ -8,12 +8,12 @@ const RankingTab = (props) => {
   const [standings, setStandings] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
-    getTable();
+    //getTable();
   }, [props]);
   async function getTable() {
     setIsLoading(true);
     const response = await fetch(
-      `https://api-football-v1.p.rapidapi.com/v3/standings?season=2021&league=${props.selected}`,
+      `https://api-football-v1.p.rapidapi.com/v3/standings?season=${props.year}&league=${props.selected}`,
       {
         method: "GET",
         headers: {

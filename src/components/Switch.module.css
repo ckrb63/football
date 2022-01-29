@@ -1,0 +1,16 @@
+.wrapper{
+  display: inline-block;
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+
+.team{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.player{
+  cursor: pointer;
+  margin-left: 1rem;
+  display: inline-block;
+}

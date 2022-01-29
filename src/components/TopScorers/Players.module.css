@@ -49,3 +49,15 @@
   display: inline-block;
   margin-left: 2rem;
 }
+
+.card .wrapper .three{
+  width: 3rem;
+}
+
+.card .wrapper .four{
+  width: 4rem;
+}
+
+.active{
+  font-weight: bold;
+}
