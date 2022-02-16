@@ -1,8 +1,15 @@
 import style from "./StandTeam.module.css";
 import RecentForm from "./RecentForm";
+import { teamActions } from "../store/team-slice";
+import { useDispatch } from "react-redux";
 const StandTeam = (props) => {
+  const dispatch = useDispatch();
+  const teamSelect = () => {
+    dispatch(teamActions.setTeam(props.id));
+    props.onClick();
+  };
   return (
-    <div className={style.card}>
+    <div className={style.card} onClick={teamSelect}>
       <span className={style.rankname}>
         <p>{props.rank}</p>
         <img src={props.logo} alt={props.name}/>
