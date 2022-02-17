@@ -5,14 +5,14 @@ import { useDispatch } from "react-redux";
 const StandTeam = (props) => {
   const dispatch = useDispatch();
   const teamSelect = () => {
-    dispatch(teamActions.setTeam(props.id));
+    dispatch(teamActions.setTeam({ team: props.id, rank: props.rank }));
     props.onClick();
   };
   return (
     <div className={style.card} onClick={teamSelect}>
       <span className={style.rankname}>
         <p>{props.rank}</p>
-        <img src={props.logo} alt={props.name}/>
+        <img src={props.logo} alt={props.name} />
         <p className={style.teamname}>{props.name}</p>
       </span>
       <div className={style.wrapper}>
@@ -25,7 +25,7 @@ const StandTeam = (props) => {
         <p>{props.gd}</p>
         <p>{props.points}</p>
         <div className={style.form}>
-          <RecentForm form={props.form}/>
+          <RecentForm form={props.form} />
         </div>
       </div>
     </div>

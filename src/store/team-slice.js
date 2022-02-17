@@ -6,10 +6,12 @@ const teamSlice = createSlice({
     season: null,
     league: null,
     team: null,
+    rank : null,
   },
   reducers:{
     setTeam(state,action){
-      state.team = action.payload;
+      state.team = action.payload.team;
+      state.rank = action.payload.rank
     },
     setSeasonLeague(state,action){
       state.season = action.payload.season;

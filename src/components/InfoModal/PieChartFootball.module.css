@@ -1,0 +1,29 @@
+.wrapper{
+  display: flex;
+}
+.wrapper p{
+  margin: 0;
+}
+.wrapper .calc{
+  display: flex;
+  width: 15rem;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.9rem;
+  font-family: "OpenSancCondensed-light";
+  align-items: center;
+}
+.wrapper .calc .type{
+  font-weight: bold;
+}
+.Pie{
+  background-color: black;
+  text-align: center;
+}
+.point{
+  font-size: 2.8rem;
+  font-family: "OpenSancCondensed-bold";
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+}

@@ -3,39 +3,18 @@ import { useSelector } from "react-redux";
 import APIKEYS from "../../secret/key";
 import { useEffect, useState } from "react";
 import PieChartFootball from "./PieChartFootball";
+import styles from "./Statics.module.css";
+import GoalStatics from "./GoalStatics";
 
-const data02 = [
-  {
-    "name": "Group A",
-    "value": 2400
-  },
-  {
-    "name": "Group B",
-    "value": 4567
-  },
-  {
-    "name": "Group C",
-    "value": 1398
-  },
-  {
-    "name": "Group D",
-    "value": 9800
-  },
-  {
-    "name": "Group E",
-    "value": 3908
-  },
-  {
-    "name": "Group F",
-    "value": 4800
-  }
-];
 const Statics = (props) => {
   const team = useSelector((state) => state.team);
+  const rank = useSelector(state=> state.rank);
   const season = useSelector((state) => state.season);
   const league = useSelector((state) => state.league);
+  const [page, setPage] = useState(1);
   const [fixtures, setFixtures] = useState({});
-  const [isLoaded, setIsLoaded] =  useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedTeam, setSelectedTeam] = useState();
   const getTeamStatics = async () => {
     const response = await fetch(
       `https://api-football-v1.p.rapidapi.com/v3/teams/statistics?league=${league}&season=${season}&team=${team}`,
@@ -49,22 +28,50 @@ const Statics = (props) => {
     );
     let data = await response.json();
     data = data.response;
+    console.log(data);
+    setSelectedTeam(data);
     const fixturesTotal = {
-      played : data.fixtures.played,
-      wins : data.fixtures.wins,
-      draws : data.fixtures.draws,
-      loses : data.fixtures.loses
+      played: data.fixtures.played,
+      wins: data.fixtures.wins,
+      draws: data.fixtures.draws,
+      loses: data.fixtures.loses,
     };
     console.log(fixturesTotal);
     setFixtures(fixturesTotal);
     setIsLoaded(true);
   };
+  const nextButtonHandler = () => {
+    setPage(page+1);
+  };
   useEffect(() => {
     getTeamStatics();
   }, []);
+  let UEFAticket = null;
+  if(rank<=4&&rank>=1){
+    UEFAticket = 'Champions League';
+  }else if(rank<=6){
+    UEFAticket = 'EUROPA League';
+  }else if(rank===7){
+    UEFAticket = 'UEROPA Conference League';
+  }
+  let context;
+  if(page===1){
+    context = <div className={styles.info}>
+    {isLoaded && (
+      <div className={styles.team}>
+        <p>{selectedTeam.team.name}</p>
+        {UEFAticket&&<p className={styles.ticket}>{UEFAticket}</p>}
+      </div>
+    )}
+    {isLoaded && <PieChartFootball data={fixtures} />}
+    <button className={styles.next} onClick={nextButtonHandler}>{`>`}</button>
+  </div>;
+  }else if(page===2){
+    context = <GoalStatics data={selectedTeam}/>;
+  }
   return (
     <Modal onClick={props.onClose}>
-      {isLoaded && <PieChartFootball data={fixtures}/>}
+      {context}
     </Modal>
   );
 };

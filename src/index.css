@@ -14,3 +14,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "OpenSancCondensed-bold";
+  src: url("./UI/fonts/OpenSansCondensed-Bold.ttf");
+}
+@font-face {
+  font-family: "OpenSancCondensed-light";
+  src: url("./UI/fonts/OpenSansCondensed-Light.ttf");
+}
+@font-face {
+  font-family: "OpenSancCondensed-italic";
+  src: url("./UI/fonts/OpenSansCondensed-LightItalic.ttf");
+}
+@font-face {
+  font-family: "Noto-thin";
+  src: url("./UI/fonts/NotoSansKR-Thin.otf");
+}
+@font-face {
+  font-family: "Noto-normal";
+  src: url("./UI/fonts/NotoSansKR-Medium.otf");
+}
+@font-face {
+  font-family: "Noto-bold";
+  src: url("./UI/fonts/NotoSansKR-Bold.otf");
+}
+@font-face {
+  font-family: "Noto-regular";
+  src: url("./UI/fonts/NotoSansKR-Regular.otf");
+}

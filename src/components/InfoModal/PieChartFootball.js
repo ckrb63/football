@@ -7,7 +7,7 @@ import {
   LabelList,
 } from "recharts";
 import React, { useCallback, useState } from "react";
-
+import styles from "./PieChartFootball.module.css";
 const COLORS = ["#00C49F", "#ACACAC", "#F6A9A2"];
 // const PieChartFootball = (props) => {
 //   const fixtures = [
@@ -60,7 +60,6 @@ const renderActiveShape = (props) => {
     value,
     name,
   } = props;
-  console.log(props);
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
   const sx = cx + (outerRadius + 10) * cos;
@@ -113,7 +112,7 @@ const renderActiveShape = (props) => {
         textAnchor={textAnchor}
         fill="#999"
       >
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+        {`${(percent * 100).toFixed(2)}%`}
       </text>
     </g>
   );
@@ -134,6 +133,7 @@ export default function PieChartFootball(props) {
       total: props.data.loses.total,
     },
   ];
+  const totalPoint = fixtures[0].total*3 + fixtures[1].total;
   const [activeIndex, setActiveIndex] = useState(0);
   const onPieEnter = useCallback(
     (_, index) => {
@@ -141,25 +141,55 @@ export default function PieChartFootball(props) {
     },
     [setActiveIndex]
   );
-
+  let homeAndaway = {};
+  if (activeIndex === 0) {
+    homeAndaway = {
+      type : "wins",
+      home: props.data.wins.home,
+      away: props.data.wins.away,
+    };
+  } else if (activeIndex === 1) {
+    homeAndaway = {
+      type : "draws",
+      home: props.data.draws.home,
+      away: props.data.draws.away,
+    };
+  } else {
+    homeAndaway = {
+      type : "loses",
+      home: props.data.loses.home,
+      away: props.data.loses.away,
+    };
+  }
   return (
-    <PieChart width={500} height={400}>
-      <Pie
-        activeIndex={activeIndex}
-        activeShape={renderActiveShape}
-        data={fixtures}
-        cx={200}
-        cy={200}
-        innerRadius={60}
-        outerRadius={80}
-        fill="#8884d8"
-        dataKey="total"
-        onMouseEnter={onPieEnter}
-      >
-        {fixtures.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-    </PieChart>
+    <div className={styles.wrapper}>
+      <PieChart width={400} height={300}>
+        <Pie
+          className={styles.Pie}
+          activeIndex={activeIndex}
+          activeShape={renderActiveShape}
+          data={fixtures}
+          cx={200}
+          cy={150}
+          innerRadius={60}
+          outerRadius={80}
+          fill="#8884d8"
+          dataKey="total"
+          onMouseEnter={onPieEnter}
+        >
+          {fixtures.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+      </PieChart>
+      <div className={styles.calc}>
+        <p className={styles.type}>{homeAndaway.type}</p>
+        <p>{`home : ${homeAndaway.home}`}</p>
+        <p>{`away : ${homeAndaway.away}`}</p>
+      </div>
+      <div className={styles.point}>
+        <p>{`${totalPoint} P`}</p>
+      </div>
+    </div>
   );
 }

@@ -1,0 +1,48 @@
+.info{
+  position: relative;
+  display: flex;
+  padding: 1rem;
+}
+.team{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "OpenSancCondensed-bold";
+}
+.team p{
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+}
+.team .ticket{
+  font-size: 1rem;
+  font-family: "OpenSancCondensed-light";
+  background-color: #230656;
+  color: white;
+  padding: .2rem 1rem;
+  border-radius: 1rem;
+}
+.team img{
+  width: 8rem;
+}
+.next{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 332px;
+  overflow: hidden;
+  border-radius: 0 14px 14px 0;
+  border: none;
+  background-color: #230656;
+  color: white;
+  transform: translateX(2px);
+  font-size: 1.4rem;
+  transition: .3s;
+  cursor: pointer;
+}
+.next:hover{
+  background-color: #00C39F;
+  transform: translateX(.4rem);
+  
+}

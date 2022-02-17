@@ -1,0 +1,22 @@
+.average{
+  font-family: "OpenSancCondensed-light";
+  font-size: 1.4rem;
+  display: inline-block;
+  height: 332px;
+}
+.average p{
+  color: white;
+  display: inline-block;
+  margin: 0 1rem 0 0;
+}
+.averageWrapper{
+  margin: 1rem 1rem 1rem 2rem;
+  padding: .4rem 1rem;
+  background-color: #230656;
+  border-radius: 1rem;
+}
+
+.average .title{
+  font-family: "OpenSancCondensed-bold";
+  color: rgb(255, 91, 91);
+}
