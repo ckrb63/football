@@ -14,8 +14,16 @@
   padding: .4rem 1rem;
   background-color: #230656;
   border-radius: 1rem;
+  transition: .2s;
+  cursor: pointer;
 }
-
+.averageWrapper:hover{
+  transform: translateX(.5rem);
+  background-color: #00C39F;
+}
+.averageWrapper:active{
+  transform: translate(0);
+}
 .average .title{
   font-family: "OpenSancCondensed-bold";
   color: rgb(255, 91, 91);
