@@ -1,8 +1,11 @@
+.wrapper{
+  display: flex;
+}
 .average{
   font-family: "OpenSancCondensed-light";
+  margin-top: 1rem;
   font-size: 1.4rem;
   display: inline-block;
-  height: 332px;
 }
 .average p{
   color: white;
@@ -24,7 +27,50 @@
 .averageWrapper:active{
   transform: translate(0);
 }
+.averageWrapperSelected{
+  background-color: #008d73;
+  margin: 1rem 1rem 1rem 2rem;
+  padding: .4rem 1rem;
+  border-radius: 1rem;
+  transition: .4s;
+
+}
 .average .title{
   font-family: "OpenSancCondensed-bold";
   color: rgb(255, 91, 91);
+}
+.totalInfo{
+  margin: 0 1rem 1rem 2rem;
+  padding: 0 1rem;
+
+}
+.totalInfo p{
+  
+  color: black;
+}
+.totalInfo .totalTitle{
+  font-family: "OpenSancCondensed-bold";
+}
+.totalInfo .penalty{
+  color: #777;
+  border: 1px solid #777;
+  padding : 0 .5rem;
+  border-radius: 14px;
+  font-size: .9rem;
+  margin-right: .3rem;
+}
+.totalGoalInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5rem;
+}
+.totalGoalInfoFocus{
+  display: flex;
+}
+.totalGoalInfoFocus p{
+  font-family: "OpenSancCondensed-bold";
+  margin: 0 0 1rem 1rem;
+  font-size: 2rem;
 }
