@@ -1,0 +1,19 @@
+.header{
+  display: flex;
+  width: 578px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.description{
+  color: #777;
+  font-size: .5rem;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+}
+.title{
+  margin: .5rem 0 0 1rem;
+  font-size: 1.5rem;
+  font-family: "OpenSancCondensed-bold";
+  display: inline-block;
+}

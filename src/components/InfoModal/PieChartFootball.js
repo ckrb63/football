@@ -165,6 +165,7 @@ export default function PieChartFootball(props) {
     <div className={styles.wrapper}>
       <PieChart width={400} height={300}>
         <Pie
+          isAnimationActive={false}
           className={styles.Pie}
           activeIndex={activeIndex}
           activeShape={renderActiveShape}

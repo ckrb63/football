@@ -1,0 +1,32 @@
+.fixture{
+  display: flex;
+  align-items: center;
+  margin: .5rem;
+  width: 36rem;
+  border: 1px solid rgb(138, 135, 135);
+  border-radius: .7rem;
+  /* transition: .2s; */
+}
+.fixture:hover{
+  transform: scale(1.03);
+  border: 1px solid #230656;
+}
+.date{
+  margin-left: .5rem;
+}
+.time{
+  margin-left: .5rem;
+}
+.team{
+  width: 8rem;
+}
+.stadium{
+  text-align: center;
+  width: 6rem;
+  font-size: .5rem;
+  color: #777;
+}
+.logo{
+  display: inline-block;
+  height: 2rem;
+}

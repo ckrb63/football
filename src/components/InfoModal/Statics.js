@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import PieChartFootball from "./PieChartFootball";
 import styles from "./Statics.module.css";
 import GoalStatics from "./GoalStatics";
+import NextFixtures from "../Fixtures/NextFixtures";
 
 const Statics = (props) => {
   const team = useSelector((state) => state.team);
@@ -88,6 +89,8 @@ const Statics = (props) => {
         >{`>`}</button>
       </div>
     );
+  } else if (page === 3){
+    context = <NextFixtures/>
   }
   return <Modal onClick={props.onClose}>{context}</Modal>;
 };
