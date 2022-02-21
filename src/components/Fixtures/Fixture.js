@@ -8,7 +8,10 @@ const Fixture = (props) => {
   const awayTeam = data.teams.away.name;
   const awayTeamLogo = data.teams.away.logo;
   const stadium = data.fixture.venue.name;
-  return <div className={styles.fixture}>
+  const fixtureClick = () => {
+    props.setid(data.fixture.id);
+  };
+  return <div className={styles.fixture} onClick={fixtureClick}>
     <span className={styles.date}>{date}</span>
     <span className={styles.time}>{time}</span>
     <span className={styles.stadium}>{stadium}</span>
