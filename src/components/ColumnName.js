@@ -3,7 +3,7 @@ import style from './ColumnName.module.css';
 const ColumnName = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollHandler = () => {
-    if(window.pageYOffset>299){
+    if(window.pageYOffset>900){
       setIsScrolled(true);
     }else{
       setIsScrolled(false);

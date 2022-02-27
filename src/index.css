@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background-image: linear-gradient( 126.3deg,  rgba(30,2,83,1) 32.2%, rgba(198,55,160,0.46) 109.2% );
+  /* background-image: linear-gradient( 126.3deg,  rgba(30,2,83,1) 32.2%, rgba(198,55,160,0.46) 109.2% ); */
+  background-color: rgb(20, 14, 49);
 
 }
 
@@ -41,4 +42,12 @@ code {
 @font-face {
   font-family: "Noto-regular";
   src: url("./UI/fonts/NotoSansKR-Regular.otf");
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("./UI/fonts/Barlow-Light.ttf");
+}
+@font-face {
+  font-family: "Merry";
+  src: url("./UI/fonts/Merriweather-Bold.ttf");
 }

@@ -1,0 +1,68 @@
+.mainpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.title {
+  margin: 0;
+  font-size: 4.3rem;
+  text-align: center;
+  font-family: "Merry";
+  /* color: #4A0787; */
+  background: -webkit-linear-gradient(left, #25aae1, #40e495, #30dd8a, #27a166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description {
+  margin: 2rem;
+  font-size: 2rem;
+  font-family: "Barlow";
+  color: rgb(214, 214, 214);
+}
+.start {
+  /* width: 10rem;
+  height: 3rem;
+  margin: 5rem;
+  border: none;
+  color: rgb(228, 228, 228);
+  border-radius: .5rem;
+  font-family: "Noto-thin";
+  font-size: 1rem; */
+  background-image: linear-gradient(90deg, #1eddff, #3313c4);
+
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 2px 8px 0 rgba(49, 196, 190, 0.75);
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.start:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px 0 rgba(49, 196, 147, 0.75);
+}
