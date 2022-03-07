@@ -33,3 +33,7 @@
   padding: .5rem;
   background-color: aquamarine;
 }
+
+.wrapper{
+  display: flex;
+}

@@ -32,19 +32,19 @@ const NextFixtures = (props) => {
         return <Fixture fixture={fixture} setid={getFixtureNumber}/>;
       })
     );
-    await data.response.map(async(fixture)=>{
-      const response = await fetch(`https://api-football-v1.p.rapidapi.com/v3/predictions?fixture=${fixture.fixture.id}`, {
-        "method": "GET",
-        "headers": {
-          "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-          "x-rapidapi-key": APIKEYS
-        }
-      });
-      const data = await response.json();
-      // fixtures.push(data);
-      tmp.push(data);
-      setFixtures(tmp);
-    });
+    // await data.response.map(async(fixture)=>{
+    //   const response = await fetch(`https://api-football-v1.p.rapidapi.com/v3/predictions?fixture=${fixture.fixture.id}`, {
+    //     "method": "GET",
+    //     "headers": {
+    //       "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+    //       "x-rapidapi-key": APIKEYS
+    //     }
+    //   });
+    //   const data = await response.json();
+    //   // fixtures.push(data);
+    //   tmp.push(data);
+    //   setFixtures(tmp);
+    // });
   };
   useEffect(() => {
     getFixtures();

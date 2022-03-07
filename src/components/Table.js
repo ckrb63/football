@@ -49,7 +49,7 @@ const Table = () => {
   }
   return <react.Fragment>
     <LeagueTab selected={getLeagueName}/>
-    <div>
+    <div className={style.wrapper}>
       <Switch setTab={setSelectedTab} tab={selectedTab}/>
       {selectedTab==='PLAYER' && attackPointTab}
       <YearSelectBox year={selectedYear} onChange={setSelectedYear}/>

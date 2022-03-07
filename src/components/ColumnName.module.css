@@ -1,9 +1,9 @@
 .column{
   top: 0;
-  width: 90.5%;
-  margin-left: 1rem;
+  width: 100%;
   background-color: white;
   z-index: 5;
+  color: black;
 }
 
 @keyframes moveDown{
@@ -15,11 +15,6 @@
   }
 }
 
-.scrolled{
-  position: fixed;
-  border-bottom: #777 solid;
-  animation: moveDown .3s ease-out;
-}
 
 .column p{
   display: inline-block;

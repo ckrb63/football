@@ -1,7 +1,8 @@
 .yearbox{
-  position: absolute;
-  right: 3rem;
   padding: .7rem;
   border-radius: 10px;
   cursor: pointer;
+}
+.input{
+  padding: 0;
 }
