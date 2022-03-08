@@ -5,6 +5,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  background-image: url(../../UI/images/layered-waves-haikei.svg);
 }
 
 .title {
