@@ -3,7 +3,7 @@ import style from './ColumnName.module.css';
 const ColumnName = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const scrollHandler = () => {
-    if(window.pageYOffset>900){
+    if(window.pageYOffset>1100){
       setIsScrolled(true);
     }else{
       setIsScrolled(false);
@@ -12,7 +12,7 @@ const ColumnName = () => {
   useEffect(()=>{
     window.addEventListener("scroll", scrollHandler)
   },[]);
-  return <div className={isScrolled ? `${style.column} ${style.scrolled}` : style['column']}>
+  return <div><div className={isScrolled ? `${style.column} ${style.scrolled}` : style['column']}>
     <p className={style.team}>Team</p>
     <p>경기</p>
     <p>승</p>
@@ -23,6 +23,8 @@ const ColumnName = () => {
     <p>GD</p>
     <p>승점</p>
     <p className={style.recent}>최근 5경기</p>
+  </div>
+  <hr/>
   </div>
 };
 export default ColumnName;

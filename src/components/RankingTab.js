@@ -34,7 +34,6 @@ const RankingTab = (props) => {
         league: data.response[0].league.id,
       })
     );
-    console.log(data);
     setStandings(data.response[0].league.standings[0]);
     setIsLoading(false);
   }

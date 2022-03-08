@@ -6,34 +6,7 @@ import styled from "styled-components";
 
 const Team = styled.div`
   background-color: white;
-  
-
-  ${({ champs }) => champs && `
-    background-image: linear-gradient(
-    to right,
-    white,
-    white,
-    white,
-    white,
-    #0a0953
-  );
-  `}
-
-  ${({ europa }) => europa && `
-    background-image: linear-gradient(
-    to right,
-    white,
-    white,
-    white,
-    white,
-    #3d1255
-  );
-  `}
-
-  
-  border-radius: 10px;
-  margin: 0 1rem 1rem 1rem;
-  box-shadow: .1rem .1rem 1px rgba(0, 0, 0, 0.2);
+  color: black;
   transition: .08s;
   cursor: pointer;
 `;
