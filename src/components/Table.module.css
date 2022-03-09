@@ -36,10 +36,20 @@
 
 .wrapper{
   display: flex;
+  justify-content: space-between;
+}
+.switch{
+  
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .maincontent{
   background-color: white;
   border-radius: 2rem;
   margin: 4rem 8rem;
+}
+
+.info1{
+  display: flex;
 }

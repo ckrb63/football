@@ -13,11 +13,11 @@ const Switch = (props) => {
   };
   const context = teamIsSelected ? (
     <Button variant="outlined" onClick={setPlayerTab} size="large">
-      Players
+      Team Standing
     </Button>
   ) : (
     <Button variant="outlined" onClick={setTeamTab} size="large">
-      Team Standing
+      Players
     </Button>
   );
   return (

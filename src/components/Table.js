@@ -1,5 +1,6 @@
 import react, { useState } from "react";
 import LeagueTab from "./LeagueTab";
+import Button from "@mui/material/Button";
 import RankingTab from "./RankingTab";
 import Switch from "./Switch";
 import TopScorers from "./TopScorers/TopScorers";
@@ -31,26 +32,16 @@ const Table = () => {
   // const filterChangeHandler = (event) =>{
   //   setSelectedYear(event.target.value);
   // }
-  const attackPointTab = (
-    <div className={style.attackPoint}>
-      <span
-        onClick={goalTabHandler}
-        className={
-          attackPoint === "scorers" ? style["goal-active"] : style["goal"]
-        }
-      >
-        Goal
-      </span>
-      <span
-        onClick={assistTabHandler}
-        className={
-          attackPoint === "assists" ? style["assist-active"] : style["assist"]
-        }
-      >
-        Assist
-      </span>
-    </div>
-  );
+  const attackPointTab =
+    <div className={style.switch}>{attackPoint === "scorers" ? (
+      <Button variant="outlined" onClick={assistTabHandler} size="large">
+        Goals
+      </Button>
+    ) : (
+      <Button variant="outlined" onClick={goalTabHandler} size="large">
+        Assists
+      </Button>
+    )}</div>;
   let context;
   switch (selectedTab) {
     case "TEAM":
@@ -73,8 +64,10 @@ const Table = () => {
       <LeagueTab selected={getLeagueName} />
       <div className={style.maincontent}>
         <div className={style.wrapper}>
+          <div className={style.info1}>
           <Switch setTab={setSelectedTab} tab={selectedTab} />
           {selectedTab === "PLAYER" && attackPointTab}
+          </div>
           <YearSelectBox year={selectedYear} onChange={setSelectedYear} />
         </div>
         {context}

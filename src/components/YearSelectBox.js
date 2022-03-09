@@ -14,7 +14,7 @@ const YearSelectBox = (props) => {
   };
   return (
     <Box sx={{ minWidth: 120 }} className={style.yearbox}>
-      <FormControl fullWidth>
+      <FormControl fullWidth size="small">
         <InputLabel className={style.input} id="demo-simple-select-label">Season</InputLabel>
         <Select
           labelId="demo-simple-select-label"
