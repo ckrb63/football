@@ -7,7 +7,7 @@
 }
 
 .card:hover{
-  border : 1px solid black;
+  border : 1px solid #1976D2;
 }
 .card p{
   display: inline-block;

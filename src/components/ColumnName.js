@@ -24,7 +24,7 @@ const ColumnName = () => {
     <p>승점</p>
     <p className={style.recent}>최근 5경기</p>
   </div>
-  <hr/>
+  <hr className={style.line}/>
   </div>
 };
 export default ColumnName;

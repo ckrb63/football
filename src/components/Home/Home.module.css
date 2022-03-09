@@ -22,7 +22,8 @@
   margin: 2rem;
   font-size: 2rem;
   font-family: "Barlow";
-  color: rgb(214, 214, 214);
+  /* color: rgb(214, 214, 214); */
+  color: rgb(88, 88, 88);
 }
 .start {
   /* width: 10rem;

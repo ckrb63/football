@@ -19,7 +19,7 @@ const Home = () => {
         <p className={styles.title}>Check the Statistics of Various</p>
         <p className={styles.title}>Football Leagues around the World</p>
         <p className={styles.description}>
-          Premier League, Laliga, Bundesliga and +900 leagues & cups.
+          Premier League, Laliga, Bundesliga and +600 leagues & cups.
         </p>
         <Stack direction="row" spacing={2}>
           <Button

@@ -6,6 +6,7 @@ import Switch from "./Switch";
 import TopScorers from "./TopScorers/TopScorers";
 import YearSelectBox from "./YearSelectBox";
 import style from "./Table.module.css";
+import MoreLeague from "./MoreLeague";
 /*
 france : 61
 german : 78
@@ -32,16 +33,19 @@ const Table = () => {
   // const filterChangeHandler = (event) =>{
   //   setSelectedYear(event.target.value);
   // }
-  const attackPointTab =
-    <div className={style.switch}>{attackPoint === "scorers" ? (
-      <Button variant="outlined" onClick={assistTabHandler} size="large">
-        Goals
-      </Button>
-    ) : (
-      <Button variant="outlined" onClick={goalTabHandler} size="large">
-        Assists
-      </Button>
-    )}</div>;
+  const attackPointTab = (
+    <div className={style.switch}>
+      {attackPoint === "scorers" ? (
+        <Button variant="outlined" onClick={assistTabHandler} size="large">
+          Goals
+        </Button>
+      ) : (
+        <Button variant="outlined" onClick={goalTabHandler} size="large">
+          Assists
+        </Button>
+      )}
+    </div>
+  );
   let context;
   switch (selectedTab) {
     case "TEAM":
@@ -64,11 +68,17 @@ const Table = () => {
       <LeagueTab selected={getLeagueName} />
       <div className={style.maincontent}>
         <div className={style.wrapper}>
-          <div className={style.info1}>
-          <Switch setTab={setSelectedTab} tab={selectedTab} />
-          {selectedTab === "PLAYER" && attackPointTab}
+          <div className={style.info}>
+            <Switch setTab={setSelectedTab} tab={selectedTab} />
+            {selectedTab === "PLAYER" && attackPointTab}
           </div>
-          <YearSelectBox year={selectedYear} onChange={setSelectedYear} />
+          <div className={style.info}>
+            <MoreLeague
+              initLeague={selectedLeague}
+              selectLeague={getLeagueName}
+            />
+            <YearSelectBox year={selectedYear} onChange={setSelectedYear} />
+          </div>
         </div>
         {context}
       </div>

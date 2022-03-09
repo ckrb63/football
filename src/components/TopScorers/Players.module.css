@@ -1,13 +1,12 @@
 .card{
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
-  margin: 0 1rem 1rem 1rem;
-  box-shadow: .1rem .1rem 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid white;
   transition: .08s;
   cursor: pointer;
 }
 .card:hover{
-  transform: scale(1.01);
+  border: 1px solid #1976D2;
 }
 .card p{
   display: inline-block;

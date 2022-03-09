@@ -18,36 +18,46 @@ code {
 @font-face {
   font-family: "OpenSancCondensed-bold";
   src: url("./UI/fonts/OpenSansCondensed-Bold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "OpenSancCondensed-light";
   src: url("./UI/fonts/OpenSansCondensed-Light.ttf");
+  font-display: swap;
+
 }
 @font-face {
   font-family: "OpenSancCondensed-italic";
+  font-display: swap;
   src: url("./UI/fonts/OpenSansCondensed-LightItalic.ttf");
 }
 @font-face {
   font-family: "Noto-thin";
   src: url("./UI/fonts/NotoSansKR-Thin.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto-normal";
   src: url("./UI/fonts/NotoSansKR-Medium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto-bold";
   src: url("./UI/fonts/NotoSansKR-Bold.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Noto-regular";
   src: url("./UI/fonts/NotoSansKR-Regular.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Barlow";
   src: url("./UI/fonts/Barlow-Light.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "Merry";
   src: url("./UI/fonts/Merriweather-Bold.ttf");
+  font-display: swap;
 }
