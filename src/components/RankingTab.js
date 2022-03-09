@@ -13,7 +13,7 @@ const RankingTab = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
-    //getTable();
+    getTable();
   }, [props]);
   async function getTable() {
     setIsLoading(true);
